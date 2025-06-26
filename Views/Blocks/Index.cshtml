@@ -1,0 +1,60 @@
+﻿@model IEnumerable<daraz.Datamodel.Block>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<h1>Index</h1>
+<a asp-controller="Johans" asp-action="Create">ClicK</a>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped table-dark text-primary">
+    <thead class="text-warning bg-success">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Block_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Block_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Block_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Feedback)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Suggestions)
+            </th>
+            <th></th>
+        </tr> 
+    </thead>
+    <tbody >
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Block_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Block_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Block_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feedback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Suggestions)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Block_ID"><button type="button" class="btn btn-success">Edit</button></a> |
+                    <a asp-action="Details" asp-route-id="@item.Block_ID"><button type="button" class="btn btn-danger">Details</button></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Block_ID"><button type="button" class="btn btn-warning">Delete</button></a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

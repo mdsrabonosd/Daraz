@@ -1,0 +1,54 @@
+﻿@model daraz.Datamodel.Block
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<h1>Create</h1>
+
+<h4>Block</h4>
+<hr />
+<div class="row form-row form-group card style="width: 18rem;>
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Block_Name" class="control-label"> name</label>
+                <input asp-for="Block_Name" class="form-control" />
+                <span asp-validation-for="Block_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block_Address" class="control-label"></label>
+                <input asp-for="Block_Address" class="form-control" />
+                <span asp-validation-for="Block_Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block_Number" class="control-label"></label>
+                <input asp-for="Block_Number" class="form-control" />
+                <span asp-validation-for="Block_Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Feedback" class="control-label"></label>
+                <input asp-for="Feedback" class="form-control" />
+                <span asp-validation-for="Feedback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Suggestions" class="control-label"></label>
+                <input asp-for="Suggestions" class="form-control" />
+                <span asp-validation-for="Suggestions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<div>
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
