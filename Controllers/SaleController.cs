@@ -12,5 +12,9 @@ namespace daraz.Controllers
         {
             return View();
         }
+        public IActionResult partial()
+        {
+            return View();
+        }
     }
 }
