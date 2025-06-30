@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using daraz.Datamodel;
+using daraz.Datamodel2;
 
 namespace daraz.Data
 {
@@ -21,5 +22,7 @@ namespace daraz.Data
         public DbSet<daraz.Datamodel.Johan> Johan { get; set; } = default!;
 
         public DbSet<daraz.Datamodel.Block> Block { get; set; } = default!;
+
+        public DbSet<daraz.Datamodel2.Library> Library { get; set; } = default!;
     }
 }

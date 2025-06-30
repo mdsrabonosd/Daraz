@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using daraz.Data;
 
@@ -10,9 +11,11 @@ using daraz.Data;
 namespace daraz.Migrations
 {
     [DbContext(typeof(darazContext))]
-    partial class darazContextModelSnapshot : ModelSnapshot
+    [Migration("20250630074610_srabonnn")]
+    partial class srabonnn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

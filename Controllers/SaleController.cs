@@ -16,5 +16,9 @@ namespace daraz.Controllers
         {
             return View();
         }
+        public IActionResult design()
+        {
+            return View();
+        }
     }
 }
